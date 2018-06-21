@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidLifeCycles" />
+            <option value="$PROJECT_DIR$/BasicSample" />
+            <option value="$PROJECT_DIR$/Court-Counter" />
+            <option value="$PROJECT_DIR$/To-DoAppMvvm" />
+            <option value="$PROJECT_DIR$/Tutorial1Basics" />
+            <option value="$PROJECT_DIR$/Tutorial2LiveData" />
+            <option value="$PROJECT_DIR$/TutorialAndroidHive" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
