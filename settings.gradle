@@ -1,4 +1,4 @@
-include ':Tutorial1Basics', ':Tutorial2LiveData'
+include ':Tutorial1Basics', ':Tutorial2LiveData', ':Tutorial3LiveDataAndDataBinding', ':Tutorial3LiveDataAndDataBinding2', ':Tutorial4MVVMRecyclerView', ':Tutorial1MVVMRecyclerView', ':Tutorial4LivedataMVVMRecyclerView'
 include ':TutorialAndroidHive'
 include ':To-DoAppMvvm'
 include ':BasicSample'

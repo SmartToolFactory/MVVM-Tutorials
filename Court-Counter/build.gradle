@@ -16,12 +16,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
 
+    // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:1.1.1"
-
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
 }

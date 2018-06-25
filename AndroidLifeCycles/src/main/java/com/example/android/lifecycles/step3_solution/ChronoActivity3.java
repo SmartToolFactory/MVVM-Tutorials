@@ -48,7 +48,7 @@ public class ChronoActivity3 extends AppCompatActivity {
                 String newText = ChronoActivity3.this.getResources().getString(
                         R.string.seconds, aLong);
                 ((TextView) findViewById(R.id.timer_textview)).setText(newText);
-                Log.d("ChronoActivity3", "Updating timer");
+                Log.d("ChronoActivity3", "onChanged() Updating timer " + aLong);
             }
         };
 

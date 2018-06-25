@@ -40,12 +40,12 @@
         <activity android:name="com.example.android.lifecycles.step3.ChronoActivity3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.lifecycles.step4_solution.LocationActivity">

@@ -84,19 +84,19 @@ ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Stud
 	android:name
 		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:35:19-86
 activity#com.example.android.lifecycles.step3.ChronoActivity3
-ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:40:9-45:20
+ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:40:9-44:20
 	android:name
 		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:40:19-86
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:41:13-44:29
-category#android.intent.category.LAUNCHER
-ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:43:17-77
-	android:name
-		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:43:27-74
 activity#com.example.android.lifecycles.step3_solution.ChronoActivity3
-ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:46:9-50:20
+ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:45:9-50:20
 	android:name
-		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:46:19-95
+		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:45:19-95
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:46:13-49:29
+category#android.intent.category.LAUNCHER
+ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:48:17-77
+	android:name
+		ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:48:27-74
 activity#com.example.android.lifecycles.step4_solution.LocationActivity
 ADDED from /Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/src/main/AndroidManifest.xml:51:9-55:20
 	android:name

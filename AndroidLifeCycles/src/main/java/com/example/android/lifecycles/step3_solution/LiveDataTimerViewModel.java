@@ -19,7 +19,9 @@ package com.example.android.lifecycles.step3_solution;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+import android.os.Handler;
 import android.os.SystemClock;
+import android.util.Log;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -37,6 +39,9 @@ public class LiveDataTimerViewModel extends ViewModel {
 
     public LiveDataTimerViewModel() {
         mInitialTime = SystemClock.elapsedRealtime();
+        /*
+
+
         Timer timer = new Timer();
 
         // Update the elapsed time every second.
@@ -46,8 +51,28 @@ public class LiveDataTimerViewModel extends ViewModel {
                 final long newValue = (SystemClock.elapsedRealtime() - mInitialTime) / 1000;
                 // setValue() cannot be called from a background thread so post to main thread.
                 mElapsedTime.postValue(newValue);
+                Log.d("ChronoActivity3", "Increase timer " + newValue);
+
             }
         }, ONE_SECOND, ONE_SECOND);
+
+         */
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final long newValue = (SystemClock.elapsedRealtime() - mInitialTime) / 1000;
+                mElapsedTime.postValue(newValue);
+                handler.postDelayed(this, ONE_SECOND);
+
+
+
+                if (mElapsedTime.getValue() != null) {
+                    System.out.println("ViewModel LiveData Counter: " + mElapsedTime.getValue());
+                }
+            }
+        }, ONE_SECOND);
 
     }
 
