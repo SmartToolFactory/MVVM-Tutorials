@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/AndroidLifeCycles" />
             <option value="$PROJECT_DIR$/BasicSample" />
             <option value="$PROJECT_DIR$/Court-Counter" />
+            <option value="$PROJECT_DIR$/LiveDataRecyclerView" />
             <option value="$PROJECT_DIR$/To-DoAppMvvm" />
             <option value="$PROJECT_DIR$/Tutorial1Basics" />
             <option value="$PROJECT_DIR$/Tutorial1MVVMRecyclerView" />
@@ -18,7 +19,6 @@
             <option value="$PROJECT_DIR$/Tutorial3LiveDataAndDataBinding" />
             <option value="$PROJECT_DIR$/Tutorial3LiveDataAndDataBinding2" />
             <option value="$PROJECT_DIR$/Tutorial4LivedataMVVMRecyclerView" />
-            <option value="$PROJECT_DIR$/Tutorial4MVVMRecyclerView" />
             <option value="$PROJECT_DIR$/TutorialAndroidHive" />
           </set>
         </option>
