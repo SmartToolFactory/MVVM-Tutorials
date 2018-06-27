@@ -1,4 +1,0 @@
-#Mon Jun 25 15:34:38 EET 2018
-base.0=/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/AndroidLifeCycles/build/intermediates/transforms/dexMerger/debug/3
-path.0=classes.dex
-renamed.0=classes.dex
