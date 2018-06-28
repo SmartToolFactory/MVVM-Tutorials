@@ -1,11 +1,9 @@
 package com.example.tutorial1mvvmrecyclerview;
 
 import android.databinding.DataBindingUtil;
-import android.databinding.ObservableArrayList;
 import android.databinding.ViewDataBinding;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -14,10 +12,10 @@ import com.example.tutorial1mvvmrecyclerview.model.Marker;
 import java.util.List;
 
 public class MarkerAdapter extends RecyclerView.Adapter<MarkerAdapter.MarkerViewHolder> {
-    private List<Marker> markerObservableArrayList;
+    private List<Marker> markerList;
 
     public MarkerAdapter(List<Marker> markers) {
-        markerObservableArrayList = markers;
+        markerList = markers;
     }
 
     @NonNull
@@ -30,12 +28,12 @@ public class MarkerAdapter extends RecyclerView.Adapter<MarkerAdapter.MarkerView
 
     @Override
     public void onBindViewHolder(@NonNull MarkerViewHolder holder, int position) {
-        holder.bind(markerObservableArrayList.get(position));
+        holder.bind(markerList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return markerObservableArrayList.size();
+        return markerList.size();
     }
 
     public class MarkerViewHolder extends RecyclerView.ViewHolder {
@@ -47,7 +45,7 @@ public class MarkerAdapter extends RecyclerView.Adapter<MarkerAdapter.MarkerView
         }
 
         public void bind(Object obj) {
-            binding.setVariable(com.example.tutorial1mvvmrecyclerview.BR.marker, obj);
+            binding.setVariable(BR.marker, obj);
             binding.executePendingBindings();
         }
     }

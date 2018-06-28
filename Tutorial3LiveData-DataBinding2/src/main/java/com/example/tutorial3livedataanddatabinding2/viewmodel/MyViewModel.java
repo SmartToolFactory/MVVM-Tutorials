@@ -26,6 +26,7 @@ public class MyViewModel extends ViewModel {
      */
     private void prepareListData() {
 
+
         userStringLiveData = Transformations.map(usersLiveData, new Function<List<User>, String>() {
             @Override
             public String apply(List<User> userList) {
