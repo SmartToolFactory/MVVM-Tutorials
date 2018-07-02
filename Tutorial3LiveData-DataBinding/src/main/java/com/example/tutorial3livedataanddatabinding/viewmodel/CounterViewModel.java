@@ -11,7 +11,7 @@ public class CounterViewModel extends ViewModel {
         return counter;
     }
 
-    private int mCounter;
+    private int myCounter;
 
     public CounterViewModel() {
 
@@ -19,9 +19,9 @@ public class CounterViewModel extends ViewModel {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mCounter++;
+                myCounter++;
                 // Value is set even app is paused but onChanged() is not called until LiveData is active()
-                counter.setValue(mCounter);
+                counter.setValue(myCounter);
                 handler.postDelayed(this, 1000);
             }
         }, 1000);

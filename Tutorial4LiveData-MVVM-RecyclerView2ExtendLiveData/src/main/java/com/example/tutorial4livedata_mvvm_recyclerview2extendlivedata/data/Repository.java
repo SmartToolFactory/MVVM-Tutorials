@@ -1,11 +1,8 @@
 package com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.data;
 
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-
-
 import com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.model.Marker;
+import com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.model.MarkerLiveData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,30 +10,36 @@ import java.util.List;
 public class Repository implements DataSource {
 
     private static Repository sInstance;
-    private MutableLiveData<List<Marker>> listMutableLiveData;
+    private List<MarkerLiveData> listMutableLiveData;
 
     private Repository() {
-        listMutableLiveData = new MutableLiveData<>();
-        List<Marker> markerList = new ArrayList<>();
+        listMutableLiveData = new ArrayList<>();
+
         Marker marker = new Marker();
         marker.setTitle("Title1");
         marker.setLatitude("10.5234124");
         marker.setAddress("Berlin");
-        markerList.add(marker);
+        MarkerLiveData markerLiveData = new MarkerLiveData();
+        markerLiveData.setValue(marker);
+        listMutableLiveData.add(markerLiveData);
+
 
         marker = new Marker();
         marker.setTitle("Title2");
         marker.setLatitude("40.7534546");
         marker.setAddress("Moskow");
-        markerList.add(marker);
+        markerLiveData = new MarkerLiveData();
+        markerLiveData.setValue(marker);
+        listMutableLiveData.add(markerLiveData);
 
         marker = new Marker();
         marker.setTitle("Title3");
         marker.setLatitude("30.7534546");
         marker.setAddress("New York");
-        markerList.add(marker);
+        markerLiveData = new MarkerLiveData();
+        markerLiveData.setValue(marker);
+        listMutableLiveData.add(markerLiveData);
 
-        listMutableLiveData.setValue(markerList);
     }
 
     public static Repository getsInstance() {
@@ -49,25 +52,21 @@ public class Repository implements DataSource {
     }
 
     @Override
-    public LiveData<List<Marker>> getAll() {
+    public List<MarkerLiveData> getAll() {
         return listMutableLiveData;
     }
 
     @Override
     public long addMarker(Marker marker) {
-        listMutableLiveData.getValue().add(marker);
+        MarkerLiveData markerLiveData = new MarkerLiveData();
+        markerLiveData.setValue(marker);
         return 1;
     }
 
     @Override
     public int update(Marker marker) {
-        List<Marker> markerList = listMutableLiveData.getValue();
-        if (markerList != null && markerList.contains(marker)) {
-            markerList.set(markerList.indexOf(marker), marker);
-        }
 
-        listMutableLiveData.setValue(markerList);
-        return markerList.indexOf(marker);
+        return listMutableLiveData.indexOf(marker);
     }
 
 }

@@ -1,7 +1,5 @@
 package com.example.tutorial1mvvmrecyclerview.viewmodel;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 
 import com.example.tutorial1mvvmrecyclerview.data.Repository;
@@ -13,7 +11,7 @@ import java.util.List;
 
 public class MarkerViewModel extends ViewModel {
 
-    private MutableLiveData<List<Marker>> listMutableLiveData = new MutableLiveData<>();
+    private List<Marker> markerList = new ArrayList<>();
 
     private Repository repository;
 
@@ -22,20 +20,19 @@ public class MarkerViewModel extends ViewModel {
     }
 
 
-    public LiveData<List<Marker>> getMarkerList() {
+    public List<Marker> getMarkerList() {
         // MOCK: Make an api call or retrieve from database
-        listMutableLiveData = repository.getAll();
-        return listMutableLiveData;
+        markerList = repository.getAll();
+        return markerList;
     }
 
     public void update() {
 
         System.out.println("MarkerViewModel update()");
 
-        List<Marker> markerList =
 
-        for (int i = 0; i < marListObservableArrayList.size(); i++) {
-            Marker marker = marListObservableArrayList.get(i);
+        for (int i = 0; i < markerList.size(); i++) {
+            Marker marker = markerList.get(i);
             marker.getTitle().set("UPDATED TITLE " + i);
         }
     }

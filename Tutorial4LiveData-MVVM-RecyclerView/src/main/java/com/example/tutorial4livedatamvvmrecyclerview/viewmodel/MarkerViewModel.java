@@ -23,15 +23,14 @@ public class MarkerViewModel extends ViewModel {
 
     public LiveData<List<Marker>> getMarkerList() {
         // MOCK: Make an api call or retrieve from database
-        listLiveData = (MutableLiveData<List<Marker>>) repository.getAll();
-        return repository.getAll();
+        return (listLiveData = (MutableLiveData<List<Marker>>) repository.getAll());
     }
 
     public void update() {
         System.out.println("MarkerViewModel update()");
         List<Marker> markerList = listLiveData.getValue();
         if (markerList != null) {
-            for (Marker marker: markerList) {
+            for (Marker marker : markerList) {
                 marker.setTitle("UPDATED TITLE");
             }
 

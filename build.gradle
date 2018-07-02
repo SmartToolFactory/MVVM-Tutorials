@@ -36,6 +36,7 @@ ext {
 
     // App dependencies
     supportLibVersion = '27.1.1'
+    dagger_version = "2.11"
     guavaVersion = '18.0'
     junitVersion = '4.12'
     mockitoVersion = '1.10.19'

@@ -5,6 +5,7 @@ public class Marker {
     private long id;
 
     private String title;
+
     private String latitude;
     private String longitude;
 
