@@ -16,7 +16,7 @@ import com.example.tutorial5livedata_mvvm_room_recyclerview.view.AddMarkerActivi
 import com.example.tutorial5livedata_mvvm_room_recyclerview.view.MarkerAdapter;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel.MarkerListViewModel;
 
-import java.util.ArrayList;
+// TODO UI(tv_summary) in AddMarkerActiviy not updated when VieModel data changes
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,5 +1,6 @@
 package com.example.tutorial5livedata_mvvm_room_recyclerview.view;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.tutorial5livedata_mvvm_room_recyclerview.R;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.databinding.ActivityAddMarkerBinding;
+import com.example.tutorial5livedata_mvvm_room_recyclerview.model.Marker;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel.AddMarkerViewModel;
 
 public class AddMarkerActivity extends AppCompatActivity {
@@ -27,6 +29,13 @@ public class AddMarkerActivity extends AppCompatActivity {
         mAddMarkerViewModel = ViewModelProviders.of(this).get(AddMarkerViewModel.class);
         mBinding.setViewModel(mAddMarkerViewModel);
 
+        mAddMarkerViewModel.markerLiveData.observe(this, new Observer<Marker>() {
+            @Override
+            public void onChanged(@Nullable Marker marker) {
+                Toast.makeText(AddMarkerActivity.this, "Marker title: " + marker.getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -41,7 +50,7 @@ public class AddMarkerActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.item_add_location:
-                long id = mAddMarkerViewModel.addMarker(mAddMarkerViewModel.markerObservableField.get());
+                long id = mAddMarkerViewModel.addMarker(mAddMarkerViewModel.markerLiveData.getValue());
                 Toast.makeText(this, "id " + id, Toast.LENGTH_SHORT).show();
                 finish();
                 break;

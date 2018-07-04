@@ -2,6 +2,7 @@ package com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
@@ -15,8 +16,7 @@ import com.example.tutorial5livedata_mvvm_room_recyclerview.util.AppExecutors;
 public class AddMarkerViewModel extends AndroidViewModel {
 
     private MarkerRepository mMarkerRepository;
-    
-    public ObservableField<Marker> markerObservableField = new ObservableField<>();
+    public MutableLiveData<Marker> markerLiveData = new MutableLiveData<>();
 
 
     public AddMarkerViewModel(@NonNull Application application) {
@@ -26,10 +26,12 @@ public class AddMarkerViewModel extends AndroidViewModel {
 
         mMarkerRepository = MarkerRepository
                 .getsInstance(MarkerLocalDataSource.getInstance(appDatabase.markerDao(), new AppExecutors()));
-        if (markerObservableField.get() == null) {
+        if (markerLiveData.getValue() == null) {
             Marker marker = new Marker();
-            marker.setTitle("New Title");
-            markerObservableField.set(marker);
+            marker.setTitle("No Title");
+            marker.setLatitude("0.0");
+            marker.setTitle("No Location");
+            markerLiveData.setValue(marker);
         }
     }
 

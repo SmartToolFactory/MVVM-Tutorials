@@ -1,4 +1,4 @@
-include ':Tutorial1MVVM-Basics', ':Tutorial1MVVM-RecyclerView', ':Tutorial2LiveData', ':Tutorial3LiveData-DataBinding', ':Tutorial3LiveData-DataBinding2', ':Tutorial4LiveData-MVVM-RecyclerView', ':Tutorial4LiveData-MVVM-RecyclerView2ExtendLiveData', ':Tutorial5LiveData-MVVM-Room-RecyclerView'
+include ':Tutorial1MVVM-Basics', ':Tutorial1MVVM-RecyclerView', ':Tutorial2LiveData', ':Tutorial3LiveData-DataBinding', ':Tutorial3LiveData-DataBinding3Transformations', ':Tutorial4LiveData-MVVM-RecyclerView', ':Tutorial4LiveData-MVVM-RecyclerView2ExtendLiveData', ':Tutorial5LiveData-MVVM-Room-RecyclerView', ':Tutorial3LiveData-DataBinding2Objects'
 include ':TutorialAndroidHive'
 include ':Todo‑MVVM‑DataBinding'
 include ':Todo-MVVM-LiveData'

@@ -4,10 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.example.tutorial5livedata_mvvm_room_recyclerview.util.BindingUtils"/>
+
+        <import type="com.example.tutorial5livedata_mvvm_room_recyclerview.util.BindingUtils" />
+
         <variable
             name="viewModel"
-            type="com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel.AddMarkerViewModel"/>
+            type="com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel.AddMarkerViewModel" />
 
     </data>
 
@@ -37,7 +39,7 @@
             android:ems="10"
             android:hint="Title"
             android:inputType="textPersonName"
-            android:text="@={viewModel.markerObservableField.title}"
+            android:text="@={viewModel.markerLiveData.title}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -63,12 +65,11 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Latitude"
-            android:text="@={viewModel.markerObservableField.latitude}"
             android:inputType="number"
+            android:text="@={viewModel.markerLiveData.latitude}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tv_latitude" />
-
 
 
         <TextView
@@ -77,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text='@{viewModel.markerObservableField.title + " "}'
+            android:text='@{viewModel.markerLiveData.title + " " + viewModel.markerLiveData.address}'
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/et_latitude" />
 

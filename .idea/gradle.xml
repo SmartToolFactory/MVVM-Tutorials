@@ -20,7 +20,8 @@
             <option value="$PROJECT_DIR$/Tutorial1MVVM-RecyclerView" />
             <option value="$PROJECT_DIR$/Tutorial2LiveData" />
             <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding" />
-            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding2" />
+            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding2Objects" />
+            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding3Transformations" />
             <option value="$PROJECT_DIR$/Tutorial4LiveData-MVVM-RecyclerView" />
             <option value="$PROJECT_DIR$/Tutorial4LiveData-MVVM-RecyclerView2ExtendLiveData" />
             <option value="$PROJECT_DIR$/Tutorial5LiveData-MVVM-Room-RecyclerView" />
