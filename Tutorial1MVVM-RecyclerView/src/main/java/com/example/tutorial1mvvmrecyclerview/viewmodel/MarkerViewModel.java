@@ -36,4 +36,15 @@ public class MarkerViewModel extends ViewModel {
             marker.getTitle().set("UPDATED TITLE " + i);
         }
     }
+
+
+    public void add() {
+        Marker marker = new Marker();
+        marker.getTitle().set("Title4");
+        marker.getLatitude().set("11.75790");
+        marker.getAddress().set("Shangai");
+
+        markerList.add(marker);
+
+    }
 }
