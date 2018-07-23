@@ -4,7 +4,6 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "com.example.android.courtcounter"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

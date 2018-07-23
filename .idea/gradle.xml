@@ -16,15 +16,15 @@
             <option value="$PROJECT_DIR$/MVVM-Sample-App-Dagger" />
             <option value="$PROJECT_DIR$/Todo-MVVM-LiveData" />
             <option value="$PROJECT_DIR$/Todo‑MVVM‑DataBinding" />
-            <option value="$PROJECT_DIR$/Tutorial1MVVM-Basics" />
-            <option value="$PROJECT_DIR$/Tutorial1MVVM-RecyclerView" />
-            <option value="$PROJECT_DIR$/Tutorial2LiveData" />
-            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding" />
-            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding2Objects" />
-            <option value="$PROJECT_DIR$/Tutorial3LiveData-DataBinding3Transformations" />
-            <option value="$PROJECT_DIR$/Tutorial4LiveData-MVVM-RecyclerView" />
-            <option value="$PROJECT_DIR$/Tutorial4LiveData-MVVM-RecyclerView2ExtendLiveData" />
-            <option value="$PROJECT_DIR$/Tutorial5LiveData-MVVM-Room-RecyclerView" />
+            <option value="$PROJECT_DIR$/Tutorial1-1MVVM-Basics" />
+            <option value="$PROJECT_DIR$/Tutorial1-2MVVM-RecyclerView" />
+            <option value="$PROJECT_DIR$/Tutorial2-1LiveData" />
+            <option value="$PROJECT_DIR$/Tutorial3-1LiveData-DataBinding" />
+            <option value="$PROJECT_DIR$/Tutorial3-2LiveData-DataBinding-Objects" />
+            <option value="$PROJECT_DIR$/Tutorial3-3LiveData-DataBinding-Transformations" />
+            <option value="$PROJECT_DIR$/Tutorial4-1LiveData-MVVM-RecyclerView" />
+            <option value="$PROJECT_DIR$/Tutorial4-2LiveData-MVVM-RecyclerViewExtendLiveData" />
+            <option value="$PROJECT_DIR$/Tutorial5-1LiveData-MVVM-Room-RecyclerView" />
             <option value="$PROJECT_DIR$/TutorialAndroidHive" />
           </set>
         </option>
