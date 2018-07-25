@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/product_item.xml",
+        "source": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/src/main/res/layout/product_item.xml"
+    },
+    {
+        "merged": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/comment_item.xml",
+        "source": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/src/main/res/layout/comment_item.xml"
+    },
+    {
+        "merged": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/product_fragment.xml",
+        "source": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/src/main/res/layout/product_fragment.xml"
+    },
+    {
+        "merged": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_fragment.xml",
+        "source": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/src/main/res/layout/list_fragment.xml"
+    }
+]
