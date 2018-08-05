@@ -1,2 +1,2 @@
 # MVVM
-This is a series of tutorials about MVVM, data binding and Room
+Series of tutorials about MVVM, data binding LiveData, and Room.
