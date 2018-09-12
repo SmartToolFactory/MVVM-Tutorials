@@ -58,8 +58,6 @@ dependencies {
     implementation 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion
     annotationProcessor "android.arch.persistence.room:compiler:" + rootProject.archRoomVersion
 
-
-
     testImplementation 'junit:junit:4.12'
 
     // Testing-only dependencies

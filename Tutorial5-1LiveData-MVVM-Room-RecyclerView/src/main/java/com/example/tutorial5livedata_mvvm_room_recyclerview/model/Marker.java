@@ -21,8 +21,6 @@ public class Marker {
     private String note;
     private long date;
 
-
-
     @Ignore
     private boolean isSelected;
 

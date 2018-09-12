@@ -1,4 +1,16 @@
-include ':Tutorial1-1MVVM-Basics', ':Tutorial1-2MVVM-RecyclerView', ':Tutorial2-1LiveData', ':Tutorial3-1LiveData-DataBinding', ':Tutorial3-3LiveData-DataBinding-Transformations', ':Tutorial4-1LiveData-MVVM-RecyclerView', ':Tutorial4-2LiveData-MVVM-RecyclerViewExtendLiveData', ':Tutorial5-1LiveData-MVVM-Room-RecyclerView', ':Tutorial3-2LiveData-DataBinding-Objects'
+include ':Tutorial1-1MVVM-Basics'
+include ':Tutorial1-2LifeCycleOwner'
+include ':Tutorial1-2MVVM-RecyclerView'
+include ':Tutorial2-1LiveData'
+include ':Tutorial3-1LiveData-DataBinding'
+include ':Tutorial3-2LiveData-DataBinding-Objects'
+include ':Tutorial3-3LiveData-DataBinding-Transformations'
+include ':Tutorial4-1LiveData-MVVM-RecyclerView'
+include ':Tutorial4-2LiveData-MVVM-RecyclerViewExtendLiveData'
+include ':Tutorial5-1LiveData-MVVM-Room-RecyclerView'
+include ':Tutorial5-2LiveData-MVVM-Room-Dagger'
+
+// External Tutorials
 include ':External-Tutorial-AndroidHive'
 include ':Todo‑MVVM‑DataBinding'
 include ':Todo-MVVM-LiveData'

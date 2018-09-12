@@ -4,17 +4,7 @@
             "outputFile": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7211deec256e2aee0c9e2cc41a4b9767/res/values-hu/values-hu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,318,433,517,629,759,835,911,994,1104,1215,1315,1426,1534,1653,1835,1938",
-                        "endColumns": "107,104,114,83,111,129,75,75,82,109,110,99,110,107,118,181,102,82",
-                        "endOffsets": "208,313,428,512,624,754,830,906,989,1099,1210,1310,1421,1529,1648,1830,1933,2016"
-                    }
-                },
-                {
-                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79d2ad6c240c3c574559eaa769f7da1e/res/values-hu/values-hu.xml",
+                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/30cbea0cedcbba5f1299cfbc90012093/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "2021",
                         "endColumns": "100",
                         "endOffsets": "2117"
+                    }
+                },
+                {
+                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1a84e4c3ec3e2558bcbacde932331fd9/res/values-hu/values-hu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,318,433,517,629,759,835,911,994,1104,1215,1315,1426,1534,1653,1835,1938",
+                        "endColumns": "107,104,114,83,111,129,75,75,82,109,110,99,110,107,118,181,102,82",
+                        "endOffsets": "208,313,428,512,624,754,830,906,989,1099,1210,1310,1421,1529,1648,1830,1933,2016"
                     }
                 }
             ]

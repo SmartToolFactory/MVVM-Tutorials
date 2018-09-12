@@ -12,7 +12,7 @@ import static com.example.tutorial5livedata_mvvm_room_recyclerview.data.local.Ap
 @Database(entities = {Marker.class}, version = DATABASE_VERSION)
 public abstract class AppDatabase extends RoomDatabase {
 
-    public static final String DATABASE_NAME = "marker.db";
+    private static final String DATABASE_NAME = "marker.db";
     public static final int DATABASE_VERSION = 1;
 
     private static AppDatabase INSTANCE;

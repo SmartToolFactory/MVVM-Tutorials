@@ -4,7 +4,7 @@
             "outputFile": "/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-BasicSample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
             "map": [
                 {
-                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7211deec256e2aee0c9e2cc41a4b9767/res/values-eu/values-eu.xml",
+                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1a84e4c3ec3e2558bcbacde932331fd9/res/values-eu/values-eu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/79d2ad6c240c3c574559eaa769f7da1e/res/values-eu/values-eu.xml",
+                    "source": "/Users/smarttoolfactory/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/30cbea0cedcbba5f1299cfbc90012093/res/values-eu/values-eu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
