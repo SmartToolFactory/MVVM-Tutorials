@@ -21,7 +21,7 @@ public class MarkerRepository implements DataSource {
         this.markerLocalDataSource = markerLocalDataSource;
     }
 
-    public static MarkerRepository getsInstance(@NonNull MarkerLocalDataSource markerLocalDataSource) {
+    public static MarkerRepository getInstance(@NonNull MarkerLocalDataSource markerLocalDataSource) {
 
         if (sInstance == null) {
             sInstance = new MarkerRepository(markerLocalDataSource);

@@ -44,15 +44,17 @@ public class MarkerLocalDataSource implements DataSource {
 
     @Override
     public long addMarker(Marker marker) {
+
         final long[] id = new long[1];
+
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-              id[0] =  mMarkerDao.insert(marker);
-              System.out.println("MarkerLocalDataSource id " + id[0]);
+                id[0] = mMarkerDao.insert(marker);
             }
         };
         mAppExecutors.diskIO().execute(runnable);
+
         return id[0];
     }
 

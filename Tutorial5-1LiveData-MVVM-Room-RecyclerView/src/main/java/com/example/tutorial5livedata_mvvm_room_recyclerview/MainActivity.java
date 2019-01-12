@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.tutorial5livedata_mvvm_room_recyclerview.databinding.ActivityMainBinding;
+import com.example.tutorial5livedata_mvvm_room_recyclerview.model.Marker;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.view.AddMarkerActivity;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.view.MarkerAdapter;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.viewmodel.MarkerListViewModel;
@@ -33,7 +34,20 @@ public class MainActivity extends AppCompatActivity {
         MarkerAdapter adapter = new MarkerAdapter(markerListViewModel.getListLiveData().getValue());
         recyclerView.setAdapter(adapter);
 
-        markerListViewModel.getListLiveData().observe(this, markerList -> adapter.setMarkerList(markerList));
+        // Listen changes on LiveData and reset list when LiveData has changed. Modifying database via Dao triggers an update on LiveData
+        markerListViewModel.getListLiveData().observe(this, markerList -> {
+            adapter.setMarkerList(markerList);
+        });
+
+
+        // Adds new marker
+        binding.button.setOnClickListener(v -> {
+            Marker marker = new Marker();
+            marker.setTitle("Marker");
+            marker.setLatitude("41.2121415");
+            marker.setAddress("Home");
+            markerListViewModel.insertMarker(marker);
+        });
     }
 
 

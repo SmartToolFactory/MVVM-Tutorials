@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        applicationId "com.test.foursquaresingle"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+}
+
+dependencies {
+
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Support
+    implementation 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
+    implementation 'com.android.support:design:' + rootProject.supportLibVersion
+    implementation 'com.android.support.constraint:constraint-layout:' + rootProject.constraintLayoutVersion
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion
+    implementation 'com.squareup.retrofit2:converter-gson:' + rootProject.retrofitVersion
+
+    // Gson
+    implementation 'com.google.code.gson:gson:' + rootProject.gsonVersion
+
+    // Location
+    implementation 'com.google.android.gms:play-services-location:' + rootProject.locationVersion
+
+    // Map
+    implementation 'com.google.android.gms:play-services-maps:' + rootProject.mapsVersion
+
+    // ViewModel and LiveData
+    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
+    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
+
+    // Room
+    implementation 'android.arch.persistence.room:runtime:' + rootProject.roomVersion
+    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
+
+    // Dagger Core dependencies
+    annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.daggerVersion
+    implementation 'com.google.dagger:dagger:' + rootProject.daggerVersion
+
+    // Dagger Android dependencies
+    annotationProcessor 'com.google.dagger:dagger-android-processor:' + rootProject.daggerVersion
+    implementation 'com.google.dagger:dagger-android-support:' + rootProject.daggerVersion
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:' + rootProject.glideVersion
+    annotationProcessor 'com.github.bumptech.glide:compiler:' + rootProject.glideVersion
+
+    // Leak Canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.2.3'
+
+}

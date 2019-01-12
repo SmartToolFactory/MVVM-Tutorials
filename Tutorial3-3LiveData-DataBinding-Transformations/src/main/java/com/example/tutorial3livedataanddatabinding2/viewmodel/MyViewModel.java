@@ -26,18 +26,20 @@ public class MyViewModel extends ViewModel {
      */
     private void prepareListData() {
 
-
+        // Transforms List<User> to String inside LiveData
         userStringLiveData = Transformations.map(usersLiveData, new Function<List<User>, String>() {
+
             @Override
             public String apply(List<User> userList) {
                 return getUserRecords(userList);
             }
+
         });
 
-
-        userStringLiveData = Transformations.map(usersLiveData, userList -> {
+// Lambda version
+/*        userStringLiveData = Transformations.map(usersLiveData, userList -> {
             return getUserRecords(userList);
-        });
+        });*/
 
     }
 
@@ -92,6 +94,7 @@ public class MyViewModel extends ViewModel {
 
     /**
      * Binds String to layout
+     *
      * @param userList list of users
      * @return String to be bound to layout via data binding
      */

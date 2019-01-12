@@ -21,13 +21,28 @@ public class MarkerListViewModel extends AndroidViewModel {
     public MarkerListViewModel(@NonNull Application application) {
         super(application);
         AppDatabase appDatabase = AppDatabase.getInstance(application.getApplicationContext());
-        mMarkerRepository = MarkerRepository
-                .getsInstance(MarkerLocalDataSource.getInstance(appDatabase.markerDao(), new AppExecutors()));
 
+        mMarkerRepository = MarkerRepository
+                .getInstance(MarkerLocalDataSource.getInstance(appDatabase.markerDao(), new AppExecutors()));
+
+        /*
+         *After getting data once from Dao with LiveData class any changes on this Dao triggers an update on LiveData too.
+         */
+        mListLiveData = mMarkerRepository.getAll();
     }
 
     public LiveData<List<Marker>> getListLiveData() {
 
         return (mListLiveData = mMarkerRepository.getAll());
+    }
+
+    /**
+     * Add new marker to database using Repository
+     *
+     * @param marker to be added to db
+     * @return id of current row
+     */
+    public long insertMarker(Marker marker) {
+        return mMarkerRepository.addMarker(marker);
     }
 }

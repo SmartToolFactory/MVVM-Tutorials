@@ -56,4 +56,5 @@ public class MarkerAdapter extends RecyclerView.Adapter<MarkerAdapter.MarkerView
         this.markerList = markerList;
         notifyDataSetChanged();
     }
+
 }

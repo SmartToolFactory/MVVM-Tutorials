@@ -34,6 +34,7 @@ public class ProjectViewModel extends AndroidViewModel {
         this.projectID = new MutableLiveData<>();
 
         projectObservable = Transformations.switchMap(projectID, input -> {
+
             if (input.isEmpty()) {
                 Log.i(TAG, "ProjectViewModel projectID is absent!!!");
                 return ABSENT;

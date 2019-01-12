@@ -16,6 +16,11 @@ import dagger.android.support.HasSupportFragmentInjector;
 /**
  * AppInjector is a helper class to automatically inject fragments if they implement {@link Injectable}.
  */
+
+
+/*
+ * NOTE: This only necessary for fragments that does not implement DaggerFragment
+ */
 public class AppInjector {
     private AppInjector() {}
 

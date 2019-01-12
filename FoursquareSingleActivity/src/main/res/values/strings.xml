@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name" translatable="false">Foursquare Single</string>
+
+    <string name="google_map_api__key" translatable="false">AIzaSyCZf4RFkMin4N0C9uCHV0rj3utjssvNupU</string>
+    <string name="double_tap_for_exit">Double tap for exit</string>
+
+    <string name="toolbar_title">Search Places</string>
+
+    <!--PlaceSearchFragment-->
+    <string name="hint_place_search_category">Exp. Cafe, Bar</string>
+    <string name="hint_place_search_where">Close to me</string>
+    <string name="action_place_search">Search</string>
+    <!--PlaceSearchFragment-->
+
+    <string name="popup_location_not_found_title">Location not available</string>
+    <string name="popup_location_not_found_content">For search place you should open gps or type search area</string>
+
+    <string name="popup_search_fail_title">Search </string>
+    <string name="popup_search_fail_content">Cant api failed</string>
+    <string name="ok">OK</string>
+
+    <string name="popup_invalid_input_title">Invalid Content</string>
+    <string name="popup_invalid_input_content">You cant search numeric data and lesser than 3 character</string>
+    <string name="searching">Searching...</string>
+
+    <string name="empty_placelist">Search result is empty</string>
+
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="double_tap_for_exit">Çıkmak için iki defa tıklayınız</string>
+
+    <string name="toolbar_title">Mekan Ara</string>
+
+    <!--PlaceSearchFragment-->
+    <string name="hint_place_search_category">Orn. Kafe,Bar</string>
+    <string name="hint_place_search_where">Nerede arıyorsunuz</string>
+    <string name="action_place_search">Ara</string>
+    <!--PlaceSearchFragment-->
+
+    <string name="popup_location_not_found_title">Konumunuza ulaşılamıyor</string>
+    <string name="popup_location_not_found_content">Arama yapabilmek için gpsi acabilir veya arama yapılacak bölgeyi yazabilirsiniz</string>
+
+    <string name="popup_search_fail_title">Ara </string>
+    <string name="popup_search_fail_content">Servise ulaşılamıyor</string>
+    <string name="ok">TAMAM</string>
+
+    <string name="popup_invalid_input_title">Geçersiz içerik</string>
+    <string name="popup_invalid_input_content">Arama yapabilmek için en az 3 karakter girmelisiniz ve rakam içermemeli</string>
+    <string name="searching">Aranıyor...</string>
+
+    <string name="empty_placelist">Uygun mekan bulunamadı</string>
+
+</resources>

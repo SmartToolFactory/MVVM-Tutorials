@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         usersViewModel.userMutableLiveData.setValue(user);
         activityMainBinding.tvUsers.setText("user: " + user.getFirstName() + ", last name: " + user.getLastName());
 
-
         activityMainBinding.setViewModel(usersViewModel);
 
         usersViewModel.userMutableLiveData.observe(this, new Observer<User>() {
