@@ -1,4 +1,4 @@
-include ':Tutorial1-1MVVM-Basics'
+include ':Tutorial1-1MVVM-Basics', ':Tutorial6_1MVVM_RxJava'
 include ':Tutorial1-2LifeCycleOwner'
 include ':Tutorial1-2MVVM-RecyclerView'
 include ':Tutorial2-1LiveData'
