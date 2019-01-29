@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.tutorial1basics.databinding.ActivityMainBinding;
-import com.example.tutorial1basics.viewmodel.UsersViewModel;
+import com.example.tutorial1basics.viewmodel.UserViewModel;
 
 /*
     This tutorial includes
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        UsersViewModel usersViewModel =
-                ViewModelProviders.of(this).get(UsersViewModel.class);
+        UserViewModel usersViewModel =
+                ViewModelProviders.of(this).get(UserViewModel.class);
         usersViewModel.getUserList();
 
         activityMainBinding.setViewmodel(usersViewModel);

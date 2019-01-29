@@ -31,6 +31,8 @@ public class VenueDetailViewModel extends ViewModel {
     public VenueDetailViewModel(VenueRepository venueRepository) {
 
         venueDetail = Transformations.switchMap(venueIDLiveData, input -> venueRepository.getVenueDetail(input));
+        // can be replaced with
+//        venueDetail = Transformations.switchMap(venueIDLiveData, venueRepository::getVenueDetail);
 
     }
 

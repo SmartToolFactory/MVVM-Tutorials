@@ -125,10 +125,14 @@ public class VenueSearchFragment extends DaggerFragment implements IQuery {
                     break;
 
                 case ERROR:
-                    // We got a result hide progress bar
-                    hideProgressBar();
-                    // show error to user
-                    showApiFailError();
+                    if (!mVenueListViewModel.isEventConsumed) {
+                        // We got a result hide progress bar
+                        hideProgressBar();
+                        // show error to user
+                        showApiFailError();
+                        mVenueListViewModel.isEventConsumed = true;
+                    }
+
                     break;
 
                 case SUCCESS:

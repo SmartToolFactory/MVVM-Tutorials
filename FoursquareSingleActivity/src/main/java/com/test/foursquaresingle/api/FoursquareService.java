@@ -63,7 +63,7 @@ public interface FoursquareService {
      * Get details of venue with given id
      *
      * @param venueID      Id of the venue to get details of
-     * @param version      determines the which version of Foursuare api to be used. Format is YYYYMMDD
+     * @param version      determines the which version of Foursquare api to be used. Format is YYYYMMDD
      * @param clientID     id of client
      * @param clientSecret secret id of client
      * @return details of the selected venue

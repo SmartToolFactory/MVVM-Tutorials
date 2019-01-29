@@ -61,6 +61,24 @@ public class VenueSearchViewModel extends ViewModel {
                 }
             }
         });
+
+        // Without lambda
+   /*
+        mVenueListData = Transformations.switchMap(queryLiveData, new Function<Query, LiveData<Resource<List<Venue>>>>() {
+            @Override
+            public LiveData<Resource<List<Venue>>> apply(Query input) {
+                if (queryLiveData.getValue() == null) {
+                    return new MutableLiveData<>();
+                } else {
+                    if (venueListQuery.type == Query.QUERY_VENUES_BY_NAME) {
+                        return venueRepository.getVenues(input.venueType, input.venueLocation);
+                    } else {
+                        return venueRepository.getVenuesByLocation(input.venueType, input.venueLocation);
+                    }
+                }
+            }
+        });
+        */
     }
 
     /**
