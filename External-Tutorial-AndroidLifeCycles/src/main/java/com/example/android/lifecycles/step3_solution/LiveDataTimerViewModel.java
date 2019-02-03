@@ -66,8 +66,6 @@ public class LiveDataTimerViewModel extends ViewModel {
                 mElapsedTime.postValue(newValue);
                 handler.postDelayed(this, ONE_SECOND);
 
-
-
                 if (mElapsedTime.getValue() != null) {
                     System.out.println("ViewModel LiveData Counter: " + mElapsedTime.getValue());
                 }

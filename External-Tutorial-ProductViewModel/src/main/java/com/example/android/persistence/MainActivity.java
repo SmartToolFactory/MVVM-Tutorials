@@ -18,11 +18,11 @@ package com.example.android.persistence;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
-import android.arch.lifecycle.LifecycleActivity;
 import com.example.android.persistence.model.Product;
 
-public class MainActivity extends LifecycleActivity {
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,9 @@ public class MainActivity extends LifecycleActivity {
         }
     }
 
-    /** Shows the product detail fragment */
+    /**
+     * Shows the product detail fragment
+     */
     public void show(Product product) {
 
         ProductFragment productFragment = ProductFragment.forProduct(product.getId());
@@ -46,6 +48,7 @@ public class MainActivity extends LifecycleActivity {
                 .beginTransaction()
                 .addToBackStack("product")
                 .replace(R.id.fragment_container,
-                        productFragment, null).commit();
+                        productFragment, null)
+                .commit();
     }
 }

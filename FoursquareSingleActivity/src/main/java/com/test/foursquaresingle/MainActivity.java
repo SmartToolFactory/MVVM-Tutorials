@@ -196,8 +196,11 @@ public class MainActivity extends DaggerAppCompatActivity {
             switch (listResource.status) {
 
                 case SUCCESS:
-                    System.out.println("Activity SUCCESS mVenueListViewModel.isEventConsumed: "
-                            + mVenueListViewModel.isEventConsumed);
+                    System.out.println("MainActivity observeVenueSearchResult mVenueListViewModel.getVenueListResource(): "
+                    + mVenueListViewModel.getVenueListResource());
+
+//                    System.out.println("Activity SUCCESS mVenueListViewModel.isEventConsumed: "
+//                            + mVenueListViewModel.isEventConsumed);
 
                     if (!mVenueListViewModel.isEventConsumed) {
                         navigateToVenueList();

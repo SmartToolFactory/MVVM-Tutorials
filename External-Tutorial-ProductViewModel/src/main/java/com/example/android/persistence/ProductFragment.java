@@ -16,12 +16,12 @@
 
 package com.example.android.persistence;
 
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +36,7 @@ import com.example.android.persistence.viewmodel.ProductViewModel;
 
 import java.util.List;
 
-public class ProductFragment extends LifecycleFragment {
+public class ProductFragment extends Fragment {
 
     private static final String KEY_PRODUCT_ID = "product_id";
 
@@ -47,7 +47,7 @@ public class ProductFragment extends LifecycleFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         // Inflate this data binding layout
         mBinding = DataBindingUtil.inflate(inflater, R.layout.product_fragment, container, false);
 
@@ -103,7 +103,9 @@ public class ProductFragment extends LifecycleFragment {
         });
     }
 
-    /** Creates product fragment for specific product ID */
+    /**
+     * Creates product fragment for specific product ID
+     */
     public static ProductFragment forProduct(int productId) {
         ProductFragment fragment = new ProductFragment();
         Bundle args = new Bundle();

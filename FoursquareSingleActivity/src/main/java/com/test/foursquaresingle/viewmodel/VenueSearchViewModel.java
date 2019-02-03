@@ -1,9 +1,14 @@
 package com.test.foursquaresingle.viewmodel;
 
+import android.arch.core.util.Function;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MediatorLiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Transformations;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModel;
+import android.support.annotation.MainThread;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.test.foursquaresingle.model.Query;
 import com.test.foursquaresingle.model.Venue;
@@ -17,7 +22,6 @@ import javax.inject.Inject;
 
 
 public class VenueSearchViewModel extends ViewModel {
-
 
     /**
      * Wrapper class for data fetch status, data, and status messages for venue list queries
@@ -49,28 +53,32 @@ public class VenueSearchViewModel extends ViewModel {
         // Gets LiveData that contains venues via VenueRepository. Repository methods are triggered by changes on queryLiveData object.
 
         // Note: This is required to bind same LiveData instance to fragment or activity
+
+  /*
         mVenueListData = Transformations.switchMap(queryLiveData, input -> {
 
-            if (queryLiveData.getValue() == null) {
+            if (input == null) {
                 return new MutableLiveData<>();
             } else {
-                if (venueListQuery.type == Query.QUERY_VENUES_BY_NAME) {
+                if (input.type == Query.QUERY_VENUES_BY_NAME) {
                     return venueRepository.getVenues(input.venueType, input.venueLocation);
                 } else {
                     return venueRepository.getVenuesByLocation(input.venueType, input.venueLocation);
                 }
             }
         });
+        */
+
+/*
 
         // Without lambda
-   /*
         mVenueListData = Transformations.switchMap(queryLiveData, new Function<Query, LiveData<Resource<List<Venue>>>>() {
             @Override
             public LiveData<Resource<List<Venue>>> apply(Query input) {
-                if (queryLiveData.getValue() == null) {
+                if (input == null) {
                     return new MutableLiveData<>();
                 } else {
-                    if (venueListQuery.type == Query.QUERY_VENUES_BY_NAME) {
+                    if (input.type == Query.QUERY_VENUES_BY_NAME) {
                         return venueRepository.getVenues(input.venueType, input.venueLocation);
                     } else {
                         return venueRepository.getVenuesByLocation(input.venueType, input.venueLocation);
@@ -78,7 +86,72 @@ public class VenueSearchViewModel extends ViewModel {
                 }
             }
         });
-        */
+*/
+
+        mVenueListData = switchMap(queryLiveData, new Function<Query, LiveData<Resource<List<Venue>>>>() {
+            @Override
+            public LiveData<Resource<List<Venue>>> apply(Query input) {
+                if (input == null) {
+                    return new MutableLiveData<>();
+                } else {
+                    if (input.type == Query.QUERY_VENUES_BY_NAME) {
+                        return venueRepository.getVenues(input.venueType, input.venueLocation);
+                    } else {
+                        return venueRepository.getVenuesByLocation(input.venueType, input.venueLocation);
+                    }
+                }
+            }
+        });
+
+        System.out.println("VenueSearchViewModel mVenueListData: " + mVenueListData);
+    }
+
+
+    @MainThread
+    public static <X, Y> LiveData<Y> switchMap(@NonNull LiveData<X> trigger,
+                                               @NonNull final Function<X, LiveData<Y>> func) {
+
+        final MediatorLiveData<Y> result = new MediatorLiveData<>();
+
+        System.out.println("VenueSearchViewModel switchMap() TRIGGER: " + trigger);
+        System.out.println("VenueSearchViewModel switchMap() RESULT: " + result);
+
+        result.addSource(trigger, new Observer<X>() {
+
+            LiveData<Y> mSource;
+
+            @Override
+            public void onChanged(@Nullable X x) {
+
+                LiveData<Y> newLiveData = func.apply(x);
+
+                System.out.println("VenueSearchViewModel switchMap()->onChanged() newLiveData: " + newLiveData);
+
+                if (mSource == newLiveData) {
+                    return;
+                }
+
+                if (mSource != null) {
+                    result.removeSource(mSource);
+                }
+
+                mSource = newLiveData;
+
+                if (mSource != null) {
+                    result.addSource(mSource, new Observer<Y>() {
+                        @Override
+                        public void onChanged(@Nullable Y y) {
+                            result.setValue(y);
+                        }
+                    });
+                }
+
+                System.out.println("VenueSearchViewModel switchMap()->onChanged() mSource: " + mSource);
+
+            }
+        });
+
+        return result;
     }
 
     /**

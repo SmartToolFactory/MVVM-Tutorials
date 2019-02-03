@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void observe(UserViewModel userViewModel) {
+
+        System.out.println("MainActivity observe() userViewModel.mUserNameLiveData: " + userViewModel.mUserNameLiveData);
+
+
+        // Observe LiveData<String>
         userViewModel.mUserNameLiveData.observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -63,5 +68,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        // Observe MediatorLiveData<String>
+ /*       userViewModel.mediatorLiveData.observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                TextView textView = findViewById(R.id.textView2);
+
+                textView.setText("User: " + s);
+
+                Toast.makeText(MainActivity.this, "User: " + s, Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
+
     }
 }

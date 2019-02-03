@@ -45,7 +45,6 @@
         <activity android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.lifecycles.step4_solution.LocationActivity">
@@ -66,7 +65,7 @@
         <activity android:name="com.example.android.lifecycles.step5_solution.Activity_step5">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

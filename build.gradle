@@ -36,8 +36,9 @@ ext {
 
     // App dependencies
 
-
+    // Support
     supportLibVersion = '28.0.0'
+    // ConstraintLayout
     constraintLayoutVersion = '1.1.3'
 
     // Google

@@ -33,7 +33,7 @@ public class MarkerListViewModel extends AndroidViewModel {
 
     public LiveData<List<Marker>> getListLiveData() {
 
-        return (mListLiveData = mMarkerRepository.getAll());
+        return ( mMarkerRepository.getAll());
     }
 
     /**
