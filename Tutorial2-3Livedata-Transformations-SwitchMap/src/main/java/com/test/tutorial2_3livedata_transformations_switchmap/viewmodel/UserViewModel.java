@@ -29,6 +29,8 @@ public class UserViewModel extends ViewModel {
 
     public MediatorLiveData<User> userMediatorLiveData = new MediatorLiveData<>();
 
+    public MutableLiveData<Integer> counterLiveData = new MutableLiveData<>();
+
 
     public UserViewModel() {
         // Dummy Repository that returns a LiveData<User>
@@ -51,7 +53,9 @@ public class UserViewModel extends ViewModel {
             }
         });
 
-        // With MediatorLiveData it can be expressed like this
+        /*
+         * With MediatorLiveData it can be expressed like this
+         */
 
         userMediatorLiveData.addSource(mUserNameLiveData, new Observer<String>() {
             @Override
@@ -62,6 +66,12 @@ public class UserViewModel extends ViewModel {
         });
 
 
+        userMediatorLiveData.addSource(counterLiveData, new Observer<Integer>() {
+            @Override
+            public void onChanged(@Nullable Integer integer) {
+
+            }
+        });
     }
 
 
