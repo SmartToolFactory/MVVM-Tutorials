@@ -118,10 +118,15 @@ public class VenueSearchFragment extends DaggerFragment implements IQuery {
             switch (listResource.status) {
 
                 case LOADING:
+                    System.out.println("VenueSearchFragment LOADING");
                     showProgressBar(getString(R.string.searching));
                     break;
 
                 case ERROR:
+
+
+                    System.out.println("VenueSearchFragment ERROR");
+
                     if (!mVenueListViewModel.isEventConsumed) {
                         // We got a result hide progress bar
                         hideProgressBar();
@@ -132,6 +137,9 @@ public class VenueSearchFragment extends DaggerFragment implements IQuery {
                     break;
 
                 case SUCCESS:
+
+                    System.out.println("VenueSearchFragment SUCCESS");
+
 
                     if (!mVenueListViewModel.isEventConsumed) {
                         // We got a result hide progress bar

@@ -15,7 +15,7 @@ public class UsersViewModel extends ViewModel {
         User user = new User();
         user.setFirstName("Jack");
         user.setLastName("Daniels");
-        userMutableLiveData.setValue(user);
+        userMutableLiveData.setValue(null);
     }
 
 }

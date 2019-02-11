@@ -65,13 +65,6 @@ public class UserViewModel extends ViewModel {
             }
         });
 
-
-        userMediatorLiveData.addSource(counterLiveData, new Observer<Integer>() {
-            @Override
-            public void onChanged(@Nullable Integer integer) {
-
-            }
-        });
     }
 
 

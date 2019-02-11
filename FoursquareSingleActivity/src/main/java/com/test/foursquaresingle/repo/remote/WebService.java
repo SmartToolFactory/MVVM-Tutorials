@@ -38,9 +38,12 @@ public class WebService {
 
         final MutableLiveData<Resource<List<Venue>>> venueListData = new MutableLiveData<>();
 
-        venueListData.setValue(Resource.loading(null));
+        venueListData.postValue(Resource.loading(null));
 
-       Call<VenueListResponse> call = foursquareService.getVenues(
+//        System.out.println("WebService onResponse() LOADING thread: " + Thread.currentThread().getName());
+
+
+        Call<VenueListResponse> call = foursquareService.getVenues(
                 FoursquareService.FOURSQUARE_VERSION,
                 FoursquareService.FOURSQUARE_CLIENT_ID,
                 FoursquareService.FOURSQUARE_SECRET_ID,
@@ -51,10 +54,12 @@ public class WebService {
             @Override
             public void onResponse(Call<VenueListResponse> call, Response<VenueListResponse> response) {
 
+//                System.out.println("WebService onResponse() SUCCESS thread: " + Thread.currentThread().getName());
+
                 if (response.body() == null) {
-                    venueListData.setValue(Resource.error("Error", null));
+                    venueListData.postValue(Resource.error("Error", null));
                 } else {
-                    venueListData.setValue(Resource.success(response.body().getResponse().getVenues()));
+                    venueListData.postValue(Resource.success(response.body().getResponse().getVenues()));
                 }
             }
 

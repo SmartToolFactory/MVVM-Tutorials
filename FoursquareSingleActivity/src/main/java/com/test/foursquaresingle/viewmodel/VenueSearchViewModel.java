@@ -88,6 +88,7 @@ public class VenueSearchViewModel extends ViewModel {
         });
 */
 
+        // With built-in function
         mVenueListData = switchMap(queryLiveData, new Function<Query, LiveData<Resource<List<Venue>>>>() {
             @Override
             public LiveData<Resource<List<Venue>>> apply(Query input) {
@@ -113,8 +114,8 @@ public class VenueSearchViewModel extends ViewModel {
 
         final MediatorLiveData<Y> result = new MediatorLiveData<>();
 
-        System.out.println("VenueSearchViewModel switchMap() TRIGGER: " + trigger);
-        System.out.println("VenueSearchViewModel switchMap() RESULT: " + result);
+//        System.out.println("VenueSearchViewModel switchMap() TRIGGER: " + trigger);
+//        System.out.println("VenueSearchViewModel switchMap() RESULT: " + result);
 
         result.addSource(trigger, new Observer<X>() {
 
@@ -125,7 +126,6 @@ public class VenueSearchViewModel extends ViewModel {
 
                 LiveData<Y> newLiveData = func.apply(x);
 
-                System.out.println("VenueSearchViewModel switchMap()->onChanged() newLiveData: " + newLiveData);
 
                 if (mSource == newLiveData) {
                     return;
@@ -137,16 +137,21 @@ public class VenueSearchViewModel extends ViewModel {
 
                 mSource = newLiveData;
 
+                System.out.println("VenueSearchViewModel switchMap()->onChanged() Thread: " + Thread.currentThread().getName() + ", mSource: " + mSource);
+
+
                 if (mSource != null) {
                     result.addSource(mSource, new Observer<Y>() {
                         @Override
                         public void onChanged(@Nullable Y y) {
                             result.setValue(y);
+
+                            System.out.println("VenueSearchViewModel switchMap()->onChanged()2 Thread: " + Thread.currentThread().getName() + ", mSource: " + mSource);
+
                         }
                     });
                 }
 
-                System.out.println("VenueSearchViewModel switchMap()->onChanged() mSource: " + mSource);
 
             }
         });
@@ -162,6 +167,9 @@ public class VenueSearchViewModel extends ViewModel {
      */
     public void queryVenues(String venueType, String venueLocation) {
         venueListQuery.setVenueListQuery(Query.QUERY_VENUES_BY_NAME, venueType, venueLocation);
+        queryLiveData.setValue(venueListQuery);
+
+        venueListQuery.setVenueListQuery(Query.QUERY_VENUES_BY_NAME, "bar", "Berlin");
         queryLiveData.setValue(venueListQuery);
     }
 

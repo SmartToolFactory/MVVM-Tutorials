@@ -32,15 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
         activityMainBinding.setViewModel(usersViewModel);
 
+        // User is not guaranteed to be NOT NULL, check for NULL
         usersViewModel.userMutableLiveData.observe(this, new Observer<User>() {
             @Override
             public void onChanged(@Nullable User user) {
-                activityMainBinding.tvUsers.setText("user: " + user.getFirstName() + ", last name: " + user.getLastName());
+                Toast.makeText(MainActivity.this, "User changed() user: " + user, Toast.LENGTH_SHORT).show();
+
+                if (user != null)
+                    activityMainBinding.tvUsers.setText("user: " + user.getFirstName() + ", last name: " + user.getLastName());
+
             }
         });
-
-
-
 
 
     }

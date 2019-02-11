@@ -1,4 +1,0 @@
-#Sat Feb 02 19:06:54 EET 2019
-base.0=/Users/smarttoolfactory/ANDROID/ANDROID WORKSPACE/Android Studio/Study Case Codes/Architecture/MVVM/External-Tutorial-ProductViewModel/build/intermediates/dex/debug/mergeDexDebug/out
-path.0=classes.dex
-renamed.0=classes.dex

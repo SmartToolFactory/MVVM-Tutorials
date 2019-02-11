@@ -1,4 +1,4 @@
-include ':Tutorial1-1MVVM-Basics', ':Tutorial2-2LiveData-Transformations-Map', ':Tutorial2-3Livedata-Transformations-SwitchMap', ':Tutorial2-4LiveData-MediatorLiveData', ':Tutorial2-5LiveData-MultipleFragments'
+include ':Tutorial1-1MVVM-Basics', ':Tutorial2-2LiveData-Transformations-Map', ':Tutorial2-3Livedata-Transformations-SwitchMap', ':Tutorial2-4LiveData-MediatorLiveData', ':Tutorial2-5LiveData-MultipleFragments', ':Tutorial2-6LiveData-MultipleFragments-SingleEvent', ':FoursquareSingleActivityCallAdapter'
 include ':Tutorial1-2LifeCycleOwner'
 include ':Tutorial1-2MVVM-RecyclerView'
 include ':Tutorial2-1LiveData'
