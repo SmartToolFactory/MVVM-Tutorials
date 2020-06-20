@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import info.androidhive.viewmodel.R;
 import info.androidhive.viewmodel.model.MenuItem;
 
@@ -26,11 +23,10 @@ public class MenuListFragment extends Fragment {
 
     public static final String TAG = MenuListFragment.class.getSimpleName();
 
-    @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
 
     MenuListViewModel viewModel;
-    Unbinder unbinder;
+
     MenuListAdapter mAdapter;
 
     public MenuListFragment() {
@@ -47,7 +43,6 @@ public class MenuListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list_items, container, false);
-        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
@@ -58,6 +53,7 @@ public class MenuListFragment extends Fragment {
         // getting ViewModel instance
         viewModel = ViewModelProviders.of(getActivity()).get(MenuListViewModel.class);
 
+        recyclerView = view.findViewById(R.id.recycler_view);
         // preparing RecyclerView
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -76,15 +72,5 @@ public class MenuListFragment extends Fragment {
                 mAdapter.setItems(menuItems);
             }
         });
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        
-        if (unbinder != null) {
-            unbinder.unbind();
-            unbinder = null;
-        }
     }
 }

@@ -14,8 +14,6 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import info.androidhive.viewmodel.R;
 import info.androidhive.viewmodel.model.MenuItem;
 
@@ -45,18 +43,17 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.name)
         TextView name;
-        @BindView(R.id.description)
         TextView description;
-        @BindView(R.id.price)
         TextView price;
-        @BindView(R.id.thumbnail)
         ImageView thumbnail;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+            name = itemView.findViewById(R.id.name);
+            description = itemView.findViewById(R.id.description);
+            price = itemView.findViewById(R.id.price);
+            thumbnail = itemView.findViewById(R.id.thumbnail);
         }
 
         void bind(MenuItem menuItem) {

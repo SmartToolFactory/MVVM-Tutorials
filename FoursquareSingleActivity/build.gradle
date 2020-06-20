@@ -74,12 +74,12 @@ dependencies {
     annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
 
     // Dagger Core dependencies
-    annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.daggerVersion
-    implementation 'com.google.dagger:dagger:' + rootProject.daggerVersion
+    annotationProcessor 'com.google.dagger:dagger-compiler:' + daggerCompiler
+    implementation 'com.google.dagger:dagger:' + daggerCompiler
 
     // Dagger Android dependencies
-    annotationProcessor 'com.google.dagger:dagger-android-processor:' + rootProject.daggerVersion
-    implementation 'com.google.dagger:dagger-android-support:' + rootProject.daggerVersion
+    annotationProcessor 'com.google.dagger:dagger-android-processor:' + daggerAndroidProcessor
+    implementation 'com.google.dagger:dagger-android-support:' + daggerAndroidSupport
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:' + rootProject.glideVersion

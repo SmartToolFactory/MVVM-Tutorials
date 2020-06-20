@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -75,12 +77,12 @@ dependencies {
     annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
 
     // Dagger Core dependencies
-    annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.daggerVersion
-    implementation 'com.google.dagger:dagger:' + rootProject.daggerVersion
+    annotationProcessor 'com.google.dagger:dagger-compiler:' + daggerCompiler
+    implementation 'com.google.dagger:dagger:' + daggerCompiler
 
     // Dagger Android dependencies
-    annotationProcessor 'com.google.dagger:dagger-android-processor:' + rootProject.daggerVersion
-    implementation 'com.google.dagger:dagger-android-support:' + rootProject.daggerVersion
+    annotationProcessor 'com.google.dagger:dagger-android-processor:' + daggerAndroidProcessor
+    implementation 'com.google.dagger:dagger-android-support:' + daggerAndroidSupport
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:' + rootProject.glideVersion
@@ -97,5 +99,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     implementation 'com.afollestad.material-dialogs:core:0.9.2.3'
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }
