@@ -1,7 +1,7 @@
 package com.example.tutorial3livedataanddatabinding.viewmodel;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import android.os.Handler;
 
 public class CounterViewModel extends ViewModel {

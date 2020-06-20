@@ -1,6 +1,6 @@
 package com.stfactory.tutorial2_6livedata_multiplefragments_singleevent;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,9 +1,9 @@
 package com.test.foursquaremultiple.location;
 
-import android.arch.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleObserver;
 import android.content.Intent;
 import android.location.Location;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public interface ILocationProvider extends LifecycleObserver {
 

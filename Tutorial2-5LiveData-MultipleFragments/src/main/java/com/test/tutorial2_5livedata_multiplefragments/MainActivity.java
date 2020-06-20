@@ -1,10 +1,10 @@
 package com.test.tutorial2_5livedata_multiplefragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,17 +16,17 @@ import com.test.tutorial2_5livedata_multiplefragments.fragment.FragmentC;
 import java.util.List;
 
 /**
- * This example demonstrates how {@link android.support.v4.app.FragmentTransaction#addToBackStack(String)}, and
+ * This example demonstrates how {@link FragmentTransaction#addToBackStack(String)}, and
  * LiveData with multiple observer fragments work.
  *
  * <li>
- * {@link android.support.v4.app.FragmentTransaction#addToBackStack(String)} is used to store transaction states in back stack.
+ * {@link FragmentTransaction#addToBackStack(String)} is used to store transaction states in back stack.
  * Back button pops previous state from stack and returns the previous fragment with exact state.
  * </li>
  *
  * <li>
- * {@link android.support.v4.app.FragmentTransaction#add(Fragment, String)} method adds fragment, after creating new instance of
- * the fragment but it does not mean this fragments are added to back stack if {@link android.support.v4.app.FragmentTransaction#addToBackStack(String)}
+ * {@link FragmentTransaction#add(Fragment, String)} method adds fragment, after creating new instance of
+ * the fragment but it does not mean this fragments are added to back stack if {@link FragmentTransaction#addToBackStack(String)}
  * is not called before {@link FragmentTransaction#commit()}
  * </li>
  */

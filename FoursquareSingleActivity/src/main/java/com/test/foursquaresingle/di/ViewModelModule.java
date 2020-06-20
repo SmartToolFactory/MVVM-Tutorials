@@ -1,7 +1,7 @@
 package com.test.foursquaresingle.di;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.test.foursquaresingle.viewmodel.VenueDetailViewModel;
 import com.test.foursquaresingle.viewmodel.VenueSearchViewModel;

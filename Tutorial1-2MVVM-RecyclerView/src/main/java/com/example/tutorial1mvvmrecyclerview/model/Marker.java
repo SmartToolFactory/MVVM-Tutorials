@@ -1,6 +1,6 @@
 package com.example.tutorial1mvvmrecyclerview.model;
 
-import android.databinding.ObservableField;
+import androidx.databinding.ObservableField;
 
 public class Marker {
 

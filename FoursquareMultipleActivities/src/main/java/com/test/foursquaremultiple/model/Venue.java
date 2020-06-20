@@ -1,6 +1,6 @@
 package com.test.foursquaremultiple.model;
 
-import android.databinding.BindingAdapter;
+import androidx.databinding.BindingAdapter;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.widget.ImageView;

@@ -1,8 +1,8 @@
 package com.example.tutorial4livedatamvvmrecyclerview.data;
 
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.tutorial4livedatamvvmrecyclerview.model.Marker;
 

@@ -1,7 +1,7 @@
 package com.test.tutorial2_3livedata_transformations_switchmap.repository;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.test.tutorial2_3livedata_transformations_switchmap.model.User;
 

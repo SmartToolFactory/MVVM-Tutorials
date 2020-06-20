@@ -1,7 +1,7 @@
 package com.test.foursquaremultiple.repo;
 
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import com.test.foursquaremultiple.model.Venue;
 import com.test.foursquaremultiple.utils.AppExecutors;

@@ -1,7 +1,7 @@
 package com.example.tutorial5livedata_mvvm_room_recyclerview.data;
 
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import com.example.tutorial5livedata_mvvm_room_recyclerview.model.Marker;
 

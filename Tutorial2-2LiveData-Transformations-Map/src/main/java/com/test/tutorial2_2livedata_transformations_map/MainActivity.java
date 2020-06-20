@@ -1,12 +1,12 @@
 package com.test.tutorial2_2livedata_transformations_map;
 
-import android.arch.core.util.Function;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.arch.core.util.Function;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +16,7 @@ import com.test.tutorial2_2livedata_transformations_map.model.User;
 import com.test.tutorial2_2livedata_transformations_map.viewmodel.UserViewModel;
 
 /**
- * This example demonstrates usage of {@link android.arch.lifecycle.Transformations#map(LiveData, Function)} method
+ * This example demonstrates usage of {@link androidx.lifecycle.Transformations#map(LiveData, Function)} method
  * map() method changes value of target(String in this example) LiveData
  * when value of source LiveData(user LiveData in this example) has changed
  */
