@@ -1,7 +1,7 @@
 package com.example.tutorial5livedata_mvvm_room_recyclerview.data.local;
 
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.annotation.NonNull;
 
 import com.example.tutorial5livedata_mvvm_room_recyclerview.data.DataSource;
 import com.example.tutorial5livedata_mvvm_room_recyclerview.model.Marker;

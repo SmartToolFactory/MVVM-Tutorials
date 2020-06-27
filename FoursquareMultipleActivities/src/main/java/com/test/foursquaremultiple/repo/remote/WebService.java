@@ -1,7 +1,7 @@
 package com.test.foursquaremultiple.repo.remote;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.test.foursquaremultiple.model.Venue;
 import com.test.foursquaremultiple.repo.Resource;

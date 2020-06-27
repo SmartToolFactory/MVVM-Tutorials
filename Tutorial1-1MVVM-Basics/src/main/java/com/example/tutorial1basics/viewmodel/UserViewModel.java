@@ -1,8 +1,8 @@
 package com.example.tutorial1basics.viewmodel;
 
-import android.arch.lifecycle.ViewModel;
-import android.databinding.ObservableField;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.ViewModel;
+import androidx.databinding.ObservableField;
+import androidx.annotation.NonNull;
 
 import com.example.tutorial1basics.model.User;
 

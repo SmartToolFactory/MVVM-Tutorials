@@ -16,8 +16,8 @@
 
 package com.test.tutorial2_5livedata_multiplefragments.viewmodel;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 /**
  * A ViewModel used in step 5.

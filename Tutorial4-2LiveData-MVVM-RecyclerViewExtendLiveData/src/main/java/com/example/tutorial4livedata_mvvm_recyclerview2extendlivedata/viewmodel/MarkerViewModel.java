@@ -1,6 +1,6 @@
 package com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.viewmodel;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.data.Repository;
 import com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.model.Marker;

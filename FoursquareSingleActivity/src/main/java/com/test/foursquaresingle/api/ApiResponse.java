@@ -16,8 +16,8 @@
 
 package com.test.foursquaresingle.api;
 
-import android.arch.persistence.room.Embedded;
-import android.support.annotation.Nullable;
+import androidx.room.Embedded;
+import androidx.annotation.Nullable;
 
 import java.io.IOException;
 

@@ -1,7 +1,7 @@
 package com.example.tutorial5livedata_mvvm_room_recyclerview.util;
 
-import android.databinding.BindingAdapter;
-import android.databinding.InverseBindingAdapter;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.InverseBindingAdapter;
 import android.widget.TextView;
 
 public class BindingUtils {

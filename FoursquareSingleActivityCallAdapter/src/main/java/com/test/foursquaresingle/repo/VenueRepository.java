@@ -1,8 +1,8 @@
 package com.test.foursquaresingle.repo;
 
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 
 import com.test.foursquaresingle.api.ApiResponse;
 import com.test.foursquaresingle.api.VenueListResponse;

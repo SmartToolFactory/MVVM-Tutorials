@@ -1,9 +1,9 @@
 package com.example.tutorial3livedataanddatabinding2;
 
-import android.arch.lifecycle.ViewModelProviders;
-import android.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tutorial3livedataanddatabinding2.databinding.ActivityMainBinding;
 import com.example.tutorial3livedataanddatabinding2.viewmodel.MyViewModel;

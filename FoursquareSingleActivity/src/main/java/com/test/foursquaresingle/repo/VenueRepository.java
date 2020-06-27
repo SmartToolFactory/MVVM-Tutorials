@@ -1,7 +1,7 @@
 package com.test.foursquaresingle.repo;
 
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import com.test.foursquaresingle.model.Venue;
 import com.test.foursquaresingle.repo.remote.WebService;

@@ -1,6 +1,6 @@
 package com.example.tutorial1mvvmrecyclerview.viewmodel;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.example.tutorial1mvvmrecyclerview.data.Repository;
 import com.example.tutorial1mvvmrecyclerview.model.Marker;

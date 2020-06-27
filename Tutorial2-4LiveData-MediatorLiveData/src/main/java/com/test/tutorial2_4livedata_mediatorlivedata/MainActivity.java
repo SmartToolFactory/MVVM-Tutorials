@@ -1,7 +1,7 @@
 package com.test.tutorial2_4livedata_mediatorlivedata;
 
-import android.arch.lifecycle.MediatorLiveData;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {

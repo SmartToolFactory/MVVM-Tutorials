@@ -1,6 +1,6 @@
 package com.example.tutorial4livedata_mvvm_recyclerview2extendlivedata.model;
 
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.MutableLiveData;
 
 public class MarkerLiveData extends MutableLiveData<Marker> {
 
