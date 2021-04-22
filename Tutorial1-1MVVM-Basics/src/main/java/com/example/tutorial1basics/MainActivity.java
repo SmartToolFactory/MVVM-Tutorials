@@ -27,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        UserViewModel usersViewModel =
-                ViewModelProviders.of(this).get(UserViewModel.class);
+        UserViewModel usersViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
         usersViewModel.getUserList();
 
         activityMainBinding.setViewmodel(usersViewModel);
