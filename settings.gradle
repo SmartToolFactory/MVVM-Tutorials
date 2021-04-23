@@ -1,5 +1,12 @@
 
-include ':Tutorial1-1MVVM-Basics', ':Tutorial2-2LiveData-Transformations-Map', ':Tutorial2-3Livedata-Transformations-SwitchMap', ':Tutorial2-4LiveData-MediatorLiveData', ':Tutorial2-5LiveData-MultipleFragments', ':Tutorial2-6LiveData-MultipleFragments-SingleEvent', ':FoursquareSingleActivityCallAdapter'
+include ':Tutorial1-1MVVM-Basics'
+include ':Tutorial2-2LiveData-Transformations-Map'
+include ':Tutorial2-3Livedata-Transformations-SwitchMap'
+include ':Tutorial2-4LiveData-MediatorLiveData'
+include ':Tutorial2-5LiveData-MultipleFragments'
+include ':Tutorial2-6LiveData-MultipleFragments-SingleEvent'
+include ':FoursquareSingleActivityCallAdapter'
+
 include ':Tutorial1-2LifeCycleOwner'
 include ':Tutorial1-2MVVM-RecyclerView'
 include ':Tutorial2-1LiveData'
@@ -24,4 +31,3 @@ include ':External-Tutorial-LiveData-RecyclerView-DiffUtil'
 include ':External-Tutorial-LiveData-RecyclerView-RoomWordsSample'
 include ':External-Tutorial-MVVM-Sample-App-Dagger-Hilt'
 include ':External-Tutorial-ProductViewModel', ':FoursquareMultipleActivities', ':FoursquareSingleActivity'
-

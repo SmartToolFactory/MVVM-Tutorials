@@ -30,7 +30,7 @@ class MainViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             _weather1.value = "Loading.."
-            _weather1.value = WeatherApi.fetchWeatherForecast()
+            _weather1.value = WeatherApi1.fetchWeatherForecast()
         }
     }
 
@@ -38,7 +38,7 @@ class MainViewModel : ViewModel() {
     // 🔥 WAY 2 - By using liveData builder.
     val weather2: LiveData<String> = liveData {
         emit("Loading..")
-        emit(WeatherApi.fetchWeatherForecast())
+        emit(WeatherApi1.fetchWeatherForecast())
     }
 
 }
@@ -46,7 +46,7 @@ class MainViewModel : ViewModel() {
 /*
 * Simulates an asynchronous API such as network call.
 * */
-object WeatherApi {
+object WeatherApi1 {
 
     suspend fun fetchWeatherForecast(): String {
         delay(2000)

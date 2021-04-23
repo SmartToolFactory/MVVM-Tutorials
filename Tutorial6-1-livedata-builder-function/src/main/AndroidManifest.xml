@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MVVMTutorials">
-        <activity android:name="com.omeriyioz.tutorial6_1_livedata_builder_function.MainActivity">
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

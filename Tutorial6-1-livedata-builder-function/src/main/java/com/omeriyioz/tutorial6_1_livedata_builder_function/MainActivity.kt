@@ -1,5 +1,6 @@
 package com.omeriyioz.tutorial6_1_livedata_builder_function
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +8,11 @@ import androidx.databinding.DataBindingUtil
 import com.omeriyioz.tutorial6_1_livedata_builder_function.databinding.ActivityMainBinding
 
 /*
-* https://www.youtube.com/watch?v=GUvi1LS_8Kw&ab_channel=AppDevNotes-LearnAndroidDevelopment video by Jose Alcérreca
+* https://www.youtube.com/watch?v=GUvi1LS_8Kw video by Jose Alcérreca
 * */
 class MainActivity : AppCompatActivity() {
 
-    private val counterViewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         // 🔥 ‍LifeCycleOwner should be set for LiveData changes to be propagated to UI for this binding
         binding.lifecycleOwner = this
 
-        binding.viewModel = counterViewModel
+        binding.viewModel = viewModel
+
+        binding.buttonOpenSecondActivity.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

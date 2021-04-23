@@ -12,6 +12,10 @@ import android.widget.TextView;
 import com.test.tutorial2_3livedata_transformations_switchmap.model.User;
 import com.test.tutorial2_3livedata_transformations_switchmap.viewmodel.UserViewModel;
 
+/*
+* 🔥 Alternatively, you can use LiveData.switchMap() from livedata-ktx extensions which is equivalent of Transformations.switchMap().
+* */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
