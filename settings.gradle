@@ -1,3 +1,4 @@
+
 include ':Tutorial1-1MVVM-Basics', ':Tutorial2-2LiveData-Transformations-Map', ':Tutorial2-3Livedata-Transformations-SwitchMap', ':Tutorial2-4LiveData-MediatorLiveData', ':Tutorial2-5LiveData-MultipleFragments', ':Tutorial2-6LiveData-MultipleFragments-SingleEvent', ':FoursquareSingleActivityCallAdapter'
 include ':Tutorial1-2LifeCycleOwner'
 include ':Tutorial1-2MVVM-RecyclerView'
@@ -9,6 +10,8 @@ include ':Tutorial4-1LiveData-MVVM-RecyclerView'
 include ':Tutorial4-2LiveData-MVVM-RecyclerViewExtendLiveData'
 include ':Tutorial5-1LiveData-MVVM-Room-RecyclerView'
 include ':Tutorial5-2LiveData-MVVM-Room-Dagger'
+include ':Tutorial6-1-livedata-builder-function'
+include ':Tutorial6-2-Coroutine-LiveData-StateFlow-SharedFlow'
 
 // External Tutorials
 include ':External-Tutorial-AndroidHive'
@@ -21,3 +24,4 @@ include ':External-Tutorial-LiveData-RecyclerView-DiffUtil'
 include ':External-Tutorial-LiveData-RecyclerView-RoomWordsSample'
 include ':External-Tutorial-MVVM-Sample-App-Dagger-Hilt'
 include ':External-Tutorial-ProductViewModel', ':FoursquareMultipleActivities', ':FoursquareSingleActivity'
+
