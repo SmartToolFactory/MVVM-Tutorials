@@ -69,10 +69,10 @@ android {
  */
 dependencies {
     // App's dependencies, including test
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.test.espresso:espresso-idling-resource:3.1.0'
     implementation "com.google.guava:guava:$rootProject.guavaVersion"
@@ -107,6 +107,6 @@ dependencies {
     androidTestImplementation 'androidx.annotation:annotation:1.0.0'
     androidTestImplementation 'androidx.legacy:legacy-support-v4:1.0.0'
     androidTestImplementation 'androidx.recyclerview:recyclerview:1.0.0'
-    androidTestImplementation 'androidx.appcompat:appcompat:1.1.0'
+    androidTestImplementation 'androidx.appcompat:appcompat:1.2.0'
     androidTestImplementation 'com.google.android.material:material:1.0.0'
 }

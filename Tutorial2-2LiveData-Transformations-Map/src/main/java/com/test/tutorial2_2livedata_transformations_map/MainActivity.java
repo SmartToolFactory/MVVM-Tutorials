@@ -19,7 +19,10 @@ import com.test.tutorial2_2livedata_transformations_map.viewmodel.UserViewModel;
  * This example demonstrates usage of {@link androidx.lifecycle.Transformations#map(LiveData, Function)} method
  * map() method changes value of target(String in this example) LiveData
  * when value of source LiveData(user LiveData in this example) has changed
+ *
+ * 🔥 Alternatively, you can use LiveData.map() from livedata-ktx extensions which is equivalent of Transformations.map().
  */
+
 public class MainActivity extends AppCompatActivity {
 
     int counter = 0;
